@@ -1,0 +1,9 @@
+{
+  "name": "Brainstorm",
+  "version": "1.0.0",
+  "description": "A nodeJS server with graphQL middleware ",
+  "main": "index.js",
+  "repository": "git@github.com:OJPARKINSON/Brainstorm.git",
+  "author": "OJPARKINSON <olliepar01@gmail.com>",
+  "license": "MIT"
+}
