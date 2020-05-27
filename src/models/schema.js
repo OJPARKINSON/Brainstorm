@@ -1,7 +1,7 @@
 
-import { gql } from 'apollo-server-express';
+const { gql } = require('apollo-server-express');
 
-export const typeDefs = gql`
+const typeDefs = gql`
     type contributions {
         weeks: [week]
         days: [day]
@@ -17,3 +17,6 @@ export const typeDefs = gql`
         getContributions(username: String!): contributions
     }
 `
+module.exports = {
+    typeDefs
+}

@@ -1,11 +1,12 @@
-import express from 'express';
-import cors from 'cors';
-import morgan from 'morgan';
-import { ApolloServer, gql } from 'apollo-server-express';
+const express = require('express');
+const cors = require('cors');
+const morgan = require('morgan');
+const { ApolloServer } = require('apollo-server-express');
 
-import { typeDefs } from './models/gqSchema';
-import { resolvers } from './models/resolvers'
+const { typeDefs } = require('./models/schema');
+const { resolvers } = require('./models/resolvers')
 
+require('dotenv').config()
 const app = express();
 
 app
@@ -15,6 +16,9 @@ app
 const server = new ApolloServer({
 	typeDefs,
 	resolvers,
+	engine: {
+		apiKey: process.env.apiKey,
+	}
 });
 
 server.applyMiddleware({ app });

@@ -1,7 +1,11 @@
-import { getContributions }  from '../controllers/controller';
+const { getContributions } = require('../controllers/controller');
 
-export const resolvers = {
+const resolvers = {
     Query: {
         getContributions
     }
 };
+
+module.exports = {
+    resolvers
+}

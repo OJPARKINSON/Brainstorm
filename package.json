@@ -8,8 +8,7 @@
   "license": "MIT",
   "scripts": {
     "start": "nodemon --exec babel-node src/index.js",
-    "test:run-server": "TEST_DATABASE_URL=mongodb://localhost:27017/mytestdatabase npm start",
-    "test:execute-test": "TEST_DATABASE_URL=mongodb://localhost:27017/mytestdatabase mocha --require @babel/register 'src/**/*.spec.js'",
+    "test:run-server": "npm start",
     "test": "echo \"No test specified\" && exit 0"
   },
   "devDependencies": {
@@ -20,8 +19,7 @@
     "axios": "^0.19.2",
     "chai": "^4.2.0",
     "mocha": "^5.2.0",
-    "morgan": "^1.9.1",
-    "nodemon": "^1.18.7"
+    "morgan": "^1.9.1"
   },
   "dependencies": {
     "apollo-server": "^2.2.3",
@@ -37,6 +35,7 @@
     "jsonwebtoken": "^8.4.0",
     "mongoose": "^5.3.14",
     "uuid": "^3.3.2",
-    "validator": "^10.9.0"
+    "validator": "^10.9.0",
+    "nodemon": "^1.18.7"
   }
 }
