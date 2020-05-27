@@ -3,15 +3,14 @@ const cors = require('cors');
 const morgan = require('morgan');
 const { ApolloServer } = require('apollo-server-express');
 
-const { typeDefs } = require('./models/schema');
-const { resolvers } = require('./models/resolvers')
+const { typeDefs } = require('./src/models/schema');
+const { resolvers } = require('./src/models/resolvers')
 
 require('dotenv').config()
 const app = express();
 
 app
 	.use(cors())
-	.use(morgan('dev'));
 
 const server = new ApolloServer({
 	typeDefs,
